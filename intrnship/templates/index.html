@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Eligibility Prediction</title>
+    <style>
+        /* Background styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/static/images/pexels-gulsahaydgn-19613014.jpg');
+
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        /* Form container styling */
+        .form-container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Predict Student Eligibility</h2>
+        <form action="/predict" method="post">
+            <label for="quiz_total">Quiz Total:</label>
+            <input type="number" step="any" id="quiz_total" name="quiz_total" placeholder="Enter Quiz Total" required>
+
+            <label for="attendance">Attendance %:</label>
+            <input type="number" step="any" id="attendance" name="attendance" placeholder="Enter Attendance Percentage" required>
+
+            <label for="overall_performance">Overall Performance:</label>
+            <input type="number" step="any" id="overall_performance" name="overall_performance" placeholder="Enter Overall Performance" required>
+
+            <input type="submit" value="Predict Eligibility">
+        </form>
+        <div class="footer">
+            <p>Powered by Logistic Regression Model</p>
+        </div>
+    </div>
+</body>
+</html>
+

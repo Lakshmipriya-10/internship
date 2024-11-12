@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        /* Background and styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('/static/images/pexels-gulsahaydgn-19613014.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Container for the result box */
+        .result-container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 500px;
+            margin: 100px auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Heading styling */
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Prediction result text */
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        /* Go back button styling */
+        a {
+            text-decoration: none;
+            color: #333;
+            background: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        a:hover {
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h2>Prediction Result</h2>
+        <p>The predicted eligibility status is: <strong>{{ prediction }}</strong></p>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>
